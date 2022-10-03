@@ -63,7 +63,8 @@ function resolveRadio() {
     blueOpt = document.getElementById("rg1_blue").checked
     greenOpt = document.getElementById("rg1_green").checked
     confirmed = confirm("Are these the values? "+redOpt+" and "+blueOpt+" and "+greenOpt)
-    
+    alert("Hello World!");
+
     out = document.getElementById("result")
     if(confirmed){
         out.innerHTML = "Values were confirmed"

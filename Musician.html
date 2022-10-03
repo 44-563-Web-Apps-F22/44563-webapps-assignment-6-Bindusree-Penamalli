@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bindusree Penamalli- Basic java script & DOM</title>
+</head>
+<body>
+<h2>Musician guess by Bindusree Penamalli</h2>
+<form>
+    <label for="form1_musician">Enter the secret musician name </label>
+    <input type ="password" id="form1_musician" name="form1" min=10 max=50 step=2 value="John Lennon"> <br>
+    <label for="form1_guess">Guess the musician </label>
+    <input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
+    <input type="button" onclick="Checkguess()" value="Check the guess">
+    <p id="result">Result will be stored</p>
+</form>
+<script> 
+var correct=0
+var wrong=0
+    function Checkguess()
+    {
+        form1_musician = document.getElementById("form1_musician").value
+        form1_guess = document.getElementById("form1_guess").value
+        if(form1_musician===form1_musician)
+        {
+        correct=correct+1
+        alert("You got it right")
+        document.getElementById("result").innerHTML="correct="+correct;
+       } 
+       else 
+       {
+        wrong=wrong+1
+        alert("Wrong Musician")
+        document.getElementById("result").innerHTML="wrong="+wrong;
+        }
+}
+</script>
+</body>
+</html> 
