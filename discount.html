@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Discounts</title>
+    </head>
+<body>
+<h2>Bindusree Penamalli computes Discounts</h2>
+<form>
+    <input type ="number" id="input01" name="color" value=20> <br>
+    <label for="input01">Enter base amount</label> </br>
+
+    <input type ="text" id="input02" name="color" value="10"> <br>
+    <label for="input02">Enter the discount percentage</label> </br>
+
+    <input type="button" onclick="applieddiscount()" value="Apply discount">
+</form>
+<p id="result">This text will be replaced </p>
+
+<script> 
+        function applieddiscount() {
+            let num1 = document.getElementById("input01").value
+            let num2 = document.getElementById("input02").value
+            let result = ' '
+            let n = 1;
+            while (n < 6) {
+                let value = num1 - (num1 * (num2/ 100))
+                value *= n
+                result += ' ' + value
+                n++
+            }
+            document.getElementById("result").innerHTML = result
+        
+        function chooseOp() {
+            let num1 = document.getElementById("input01").value
+            let num2 = document.getElementById("input02").value
+            let multiplication = document.getElementById("multiplies").checked
+            let division = document.getElementById("division").checked
+            let exponent = document.getElementById("exponent").checked
+            let result = ''
+
+            if (multiplication) {
+                result = num1 * num2 
+            }else if(division){
+                result = num1 / num2
+            }
+            else if(exponent){
+                result = num1 ** num2
+            }
+            document.getElementById("operations").innerHTML = result
+
+        }
+</script>
+
+</body>
+</html> 
