@@ -16,7 +16,6 @@
 <div class="container">
     <img src="ant.jpg" id="Insect" alt="Ant Image" width="100px" height="100px" onclick="swapImage()" >
 </div>
-<
 <script> 
 var correct=0, wrong=0, useImage = 1
     function Checkguess()
@@ -36,23 +35,20 @@ var correct=0, wrong=0, useImage = 1
         }
         document.getElementById("result").innerHTML="wrong="+wrong;
 }
-function swapImage()
-    {
-switch(useImage) {
-  case 1:
-  document.getElementById("Insect").src = "Ant.jpg"; useImage = 2;
-  useImage=useImage+1;
-  break;
-  case 2:
-  document.getElementById("Insect").src = "Mosquito.jpg"; useImage = 3;
-  useImage=useImage+1;
-    break;
-  case 3:
-  document.getElementById("Insect").src = "Pollen Beetle.jpg"; useImage = 1;
-  useImage=useImage+1;
-    break; 
-  default:
-  document.getElementById("Insect").src = "ant.jpg"; useImage = 2;
+function swapImage(){
+    switch(useImage){
+        case 1:
+            image.src = "ant.jpg";
+            useImage = useImage + 1;
+            break;
+        case 2:
+            image.src = "Mosquito.jpg";
+            useImage = useImage + 1;
+            break;
+        case 3:
+            image.src = "Pollen Beetles.jpg"
+            useImage = 1;
+            break;
 }
     }
 </script>
