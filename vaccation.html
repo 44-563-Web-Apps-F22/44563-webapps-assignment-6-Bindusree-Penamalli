@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vaccation Schedule</title>
+    </head>
+<body>
+
+<h2>Bindusree Penamalli selects a vaccation</h2>
+
+<form>
+    <label for="Flybyair">Travel by AirFly</label>
+    <input type ="checkbox" id="air" name="air" value=True> <br>
+    <label for="Flybydomestic">Domestic</label>
+    <input type ="checkbox" id="domestic" name="domestic" value=True> <br>
+    <label for="resorttime">Resort</label>
+    <input type ="checkbox" id="resort" name="resort" value=False> <br>
+    <input type="button" onclick="chooseOp()" value="Select a vacation">
+</form>
+
+<p id="result">This results will be displayed </p>
+
+<script> 
+let my_vacation = {}
+
+function chooseOp(){
+    my_vacation = {}
+    let aircheck = document.getElementById("Flybyair").checked
+    let catcheck = document.getElementById("Flybydomestic").checked
+    let staycheck = document.getElementById("resorttime").checked
+    my_vacation = {air:aircheck,domestic:catcheck,resort:staycheck}
+
+    document.getElementById("result").innerHTML = JSON.stringify(my_vacation)
+
+}
+</script>
+
+</body>
+</html> 
