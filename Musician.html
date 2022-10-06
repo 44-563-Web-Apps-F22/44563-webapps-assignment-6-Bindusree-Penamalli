@@ -13,9 +13,11 @@
     <input type="button" onclick="Checkguess()" value="Check the guess">
     <p id="result">Result will be stored</p>
 </form>
+<div class="container">
+    <img id="Imagesofinsects" src="A" alt="Ant Image" height="100px" width="100px" onclick="swapImage()"/>
+</div>
 <script> 
-var correct=0
-var wrong=0
+var correct=0, wrong=0, useImage = 1
     function Checkguess()
     {
         form1_musician = document.getElementById("form1_musician").value
@@ -30,10 +32,28 @@ var wrong=0
        {
         wrong=wrong+1
         alert("Wrong Musician")
-        document.getElementById("result").innerHTML="wrong="+wrong;
         }
+        document.getElementById("result").innerHTML="wrong="+wrong;
 }
-
+function swapImage()
+    {
+switch(useImage) {
+  case 1:
+  document.getElementById("Imagesofinsects").src = "Ant.jpg"; useImage = 2;
+  useImage=useImage+1;
+  break;
+  case 2:
+  document.getElementById("Imagesofinsects").src = "Mosquito.jpg"; useImage = 3;
+  useImage=useImage+1;
+    break;
+  case 3:
+  document.getElementById("Imagesofinsects").src = "Pollen Beetle.jpg"; useImage = 1;
+  useImage=useImage+1;
+    break; 
+  default:
+  document.getElementById("Imagesofinsects").src = "ant.jpg"; useImage = 2;
+}
+    }
 </script>
 </body>
 </html> 
