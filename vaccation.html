@@ -16,6 +16,13 @@
     <input type ="checkbox" id="resort" name="resort" value=False> <br>
     <input type="button" onclick="chooseOp()" value="Select a vacation">
 </form>
+<form>
+    <input type="text" id="cityName" value=city>
+    <label for="cityName">Enter a city</label></br>
+    <input type="text" id="priceofcity"> 
+    <label for="priceofcity">Enter the price</label></br>
+    <input type="button" onclick="updateVacation()" value="Update the vacation">
+</form>
 
 <p id="result">This results will be displayed </p>
 
@@ -31,6 +38,12 @@ function chooseOp(){
 
     document.getElementById("result").innerHTML = JSON.stringify(my_vacation)
 
+}
+function updateVacation(){
+    let name= document.getElementById("cityName").value
+    let value=document.getElementById("priceofthecity").value
+    my_vacation[name]= value
+    document.getElementById("result").innerHTML = JSON.stringify(my_vacation)
 }
 </script>
 
